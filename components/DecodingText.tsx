@@ -130,7 +130,8 @@ export default function DecodingText({
         // Start with delay
         const timeoutId = setTimeout(startAnimation, delay);
 
-        return () => {
+        const Tag = Component as any;
+    return () => {
             clearTimeout(timeoutId);
             if (rafRef.current) {
                 cancelAnimationFrame(rafRef.current);
@@ -140,15 +141,17 @@ export default function DecodingText({
 
     // Cleanup on unmount
     useEffect(() => {
-        return () => {
+        const Tag = Component as any;
+    return () => {
             if (rafRef.current) {
                 cancelAnimationFrame(rafRef.current);
             }
         };
     }, []);
 
+    const Tag = Component as any;
     return (
-        <Component
+        <Tag
             className={className}
             style={{
                 willChange: isComplete ? 'auto' : 'contents',
@@ -156,6 +159,6 @@ export default function DecodingText({
             }}
         >
             {displayText || text}
-        </Component>
+        </Tag>
     );
 }

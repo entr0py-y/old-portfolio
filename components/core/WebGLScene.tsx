@@ -124,9 +124,7 @@ function Tesseract() {
                     <bufferGeometry>
                         <bufferAttribute
                             attach="attributes-position"
-                            count={2}
-                            array={new Float32Array([...outerVertices[a], ...outerVertices[b]])}
-                            itemSize={3}
+                            args={[new Float32Array([...outerVertices[a], ...outerVertices[b]]), 3]}
                         />
                     </bufferGeometry>
                     <lineBasicMaterial color="#ffffff" transparent opacity={0.6} />
@@ -139,9 +137,7 @@ function Tesseract() {
                     <bufferGeometry>
                         <bufferAttribute
                             attach="attributes-position"
-                            count={2}
-                            array={new Float32Array([...innerVertices[a], ...innerVertices[b]])}
-                            itemSize={3}
+                            args={[new Float32Array([...innerVertices[a], ...innerVertices[b]]), 3]}
                         />
                     </bufferGeometry>
                     <lineBasicMaterial color="#888888" transparent opacity={0.3} />
@@ -154,9 +150,7 @@ function Tesseract() {
                     <bufferGeometry>
                         <bufferAttribute
                             attach="attributes-position"
-                            count={2}
-                            array={new Float32Array([...v, ...innerVertices[i]])}
-                            itemSize={3}
+                            args={[new Float32Array([...v, ...innerVertices[i]]), 3]}
                         />
                     </bufferGeometry>
                     <lineBasicMaterial color="#ffffff" transparent opacity={0.15} />
@@ -196,9 +190,7 @@ function ParticleField() {
             <bufferGeometry>
                 <bufferAttribute
                     attach="attributes-position"
-                    count={particleCount}
-                    array={positions}
-                    itemSize={3}
+                    args={[positions, 3]}
                 />
             </bufferGeometry>
             <pointsMaterial

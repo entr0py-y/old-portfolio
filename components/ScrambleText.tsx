@@ -68,13 +68,14 @@ export default function ScrambleText({ text, className = '', duration = 500, as:
         setDisplayText(text);
     }, [text]);
 
+    const Tag = Component as any;
     return (
-        <Component
+        <Tag
             className={className}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             {displayText}
-        </Component>
+        </Tag>
     );
 }
