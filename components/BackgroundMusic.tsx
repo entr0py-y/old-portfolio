@@ -30,7 +30,11 @@ export default function BackgroundMusic({ shouldPlay, isInverted = false, onAnal
         audio.addEventListener('play', () => setIsPlaying(true));
         audio.addEventListener('pause', () => setIsPlaying(false));
         audio.addEventListener('canplaythrough', () => setIsLoaded(true));
-        audio.addEventListener('error', (e) => console.error('Audio error:', e));
+        audio.addEventListener('error', (e) => {
+            if (audio.error && audio.error.code !== 1) { // 1 = MEDIA_ERR_ABORTED
+                console.error('Audio error details:', audio.error.message || audio.error.code);
+            }
+        });
 
         audioRef.current = audio;
 
