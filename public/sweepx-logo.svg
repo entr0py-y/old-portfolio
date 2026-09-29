@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer white circle -->
+  <circle cx="100" cy="100" r="85" stroke="white" stroke-width="8" fill="none"/>
+  
+  <!-- Middle white circle -->
+  <circle cx="90" cy="90" r="60" stroke="white" stroke-width="8" fill="none"/>
+  
+  <!-- Inner white circle with X -->
+  <circle cx="100" cy="80" r="35" stroke="white" stroke-width="6" fill="none"/>
+  
+  <!-- X in the center -->
+  <line x1="85" y1="65" x2="115" y2="95" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <line x1="115" y1="65" x2="85" y2="95" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Red accent shape -->
+  <path d="M 70 110 Q 60 120 50 140 L 70 145 Q 80 125 90 115 Z" fill="#FF0000"/>
+</svg>
